@@ -4,8 +4,7 @@ Title: Clustering at Light Speed
 Version: 0.1.0
 Author: Ajay Agarwal
 Maintainer: Ajay <adniajay@gmail.com>
-Description: Performs hierachical clustering, plots dendograms, performs
-validation, and gives AU/BP values fast
+Description: Performs hierachical clustering, plots dendograms, performs validation, and gives AU/BP values fast
 License: MIT
 Encoding: UTF-8
 LazyData: true
