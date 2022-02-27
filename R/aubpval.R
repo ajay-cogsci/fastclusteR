@@ -11,6 +11,7 @@
 
 install.packages("factoextra")
 install.packages("pvclust")
+install.packages("cluster")
 
 
 library("pvclust")

@@ -20,6 +20,7 @@ install.packages("factoextra")
 
 library("cluster")
 library("factoextra")
+library("NbClust")
 
 set.seed(123)
 
