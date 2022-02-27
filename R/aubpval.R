@@ -7,6 +7,11 @@
 #' @export
 #' @examples
 #' totalclusteR()
+#'
+
+r = getOption("repos")
+r["CRAN"] = "http://cran.us.r-project.org"
+options(repos = r)
 
 
 install.packages("factoextra")
@@ -23,7 +28,7 @@ set.seed(123)
 
 aubpval <- function(data)
 {
-  res <- pvclust(data, method.hclust = "average",method.dist = "correlation", nboot = 1000)
+  res <- pvclust::pvclust(data, method.hclust = "average",method.dist = "correlation", nboot = 1000)
   plot(res, hang=-1, cex=0.5)
-  pvrect(res)
+  pvclust::pvrect(res)
 }

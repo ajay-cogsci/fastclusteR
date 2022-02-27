@@ -16,9 +16,8 @@ clusterme(data)
   \item{data}{
   numeric matrix or dataframe
 }
-\item{x}
-integer. Number of Clusters requited for Hierachical Clustering
 }
+
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }

@@ -10,7 +10,9 @@
 
 
 
-
+r = getOption("repos")
+r["CRAN"] = "http://cran.us.r-project.org"
+options(repos = r)
 
 
 
@@ -21,6 +23,7 @@ install.packages("factoextra")
 library("cluster")
 library("factoextra")
 library("NbClust")
+library("ggplot2")
 
 set.seed(123)
 
@@ -32,12 +35,12 @@ checkme <- function(data)
 
 
 
-  list(plot(fviz_nbclust(data, kmeans, method = "wss") +
-         geom_vline(xintercept = 4, linetype = 2)+
-         labs(subtitle = "Elbow method")),
+  list(plot(factoextra::fviz_nbclust(data, kmeans, method = "wss") +
+              ggplot2::geom_vline(xintercept = 4, linetype = 2)+
+              ggplot2::labs(subtitle = "Elbow method")),
 
-  plot(fviz_nbclust(data, kmeans, method = "silhouette")+
-         labs(subtitle = "Silhouette method")),
-  plot(fviz_nbclust(data, kmeans, nstart = 25, method = "gap_stat", nboot = 50)+
-         labs(subtitle = "Gap statistic method")))
+  plot(factoextra::fviz_nbclust(data, kmeans, method = "silhouette")+
+         ggplot2::labs(subtitle = "Silhouette method")),
+  plot(factoextra::fviz_nbclust(data, kmeans, nstart = 25, method = "gap_stat", nboot = 50)+
+         ggplot2::labs(subtitle = "Gap statistic method")))
 }

@@ -12,11 +12,11 @@ A fast, simpler tool for hierachical cluster validation through AU (approximatel
 }
 
 \usage{
-aubpval(x)
+aubpval(data)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{
+  \item{data}{
 numeric value or dataframe
 }
 }
@@ -48,8 +48,8 @@ Expedite as per taste !
 
 
 
-data("lung")
-aubpval(lung)
+data(USArrests)
+aubpval(USArrests)
 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

@@ -45,8 +45,8 @@ Expedite as per taste !
 }
 \examples{
 
-data("lung")
-checkme(lung)
+data(USArrests)
+checkme(USArrests)
 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
